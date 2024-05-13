@@ -331,7 +331,7 @@ main{
     gap: 220px;
 }
 
-.encuentranos h1{
+.encuentranosIconos h1{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -339,10 +339,7 @@ main{
 }
 
 .encuentranosIconos i{
-    margin: 20px;
-    color: var(--colorContraste);
-    justify-content: center;
-    align-items: center;
+    color: var(--colorFondo);
 }
 
 .encuentranosMapa{
