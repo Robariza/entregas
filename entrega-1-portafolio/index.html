@@ -39,7 +39,8 @@
         <!------------ MENÚ DE NAVEGACIÓN ------------->
 
         <nav class="menuNav">
-            <ul class="listaMenu">
+            <!--------------------- LISTA ACCESOS--------------------->
+            <ul class="listaLogos">
                 <!------------ LOGO ------------->
                 <li><a href="./index.html">
                         <img class="logo" src="./assets/Logo.jpg" alt="logo">
@@ -57,6 +58,9 @@
                         <i><i class="bi bi-geo-alt"></i></i>
                     </a>
                 </li>
+            </ul>
+            <!--------------------- LISTA MENÚ DE NAVEGACIÓN--------------------->
+            <ul class="listaMenu">
                 <!------------ INICIO ------------->
                 <li>
                     <a href="./index.html">
@@ -87,17 +91,20 @@
 
     <!--------------------------------------------------------------------- MAIN ------------------------------------------------------------------>
     <main>
-        <!---------------------- SERVICIOS -------------------->
-        <section class="servicios">
-            <div class="tituloServicios">
+        <!--------------------------- ENCABEZADO SERVICIOS -------------------------->
+        <section class="encabezadoServicios">
                 <h1>Algunos de nuestros servicios</h1>
-            </div>
-            
-            <!-- CULATAS -->
+        </section>
+
+        <!--------------------------- SERVICIOS -------------------------->
+        <section class="servicios">
+
+            <!------------ CULATAS ------------->
             <div class="culatas">
-                <h2>culatas</h2>
-                <img src="./assets/servicios/valvula.png" alt="valvula">
+                
                 <ul>
+                    <li><h2>culatas</h2></li>
+                    <li><img src="./assets/servicios/valvula.png" alt="valvula"></li>
                     <li>cepillado</li>
                     <li>cambiar guias</li>
                     <li>cambiar asientos</li>
@@ -105,11 +112,11 @@
                 </ul>
             </div>
 
-            <!-- BLOQUES -->
+            <!------------ BLOQUES ------------->
             <div class="bloques">
-                <h2>bloques</h2>
-                <img src="./assets/servicios/bloque.png" alt="bloque">
                 <ul>
+                    <li><h2>bloques</h2></li>
+                    <li><img src="./assets/servicios/bloque.png" alt="bloque"></li>
                     <li>cepillar bloques</li>
                     <li>encamisar bloque</li>
                     <li>circulo de bancada</li>
@@ -117,11 +124,11 @@
                 </ul>
             </div>
 
-            <!-- CIGUEÑALES -->
+            <!------------ CIGUEÑALES ------------->
             <div class="cigueñal">
-                <h2>cigueñales</h2>
-                <img src="./assets/servicios/cigueñal.png" alt="cigueñal">
                 <ul>
+                    <li><h2>cigueñales</h2></li>
+                    <li><img src="./assets/servicios/cigueñal.png" alt="cigueñal"></li>
                     <li>pulir cigueñal</li>
                     <li>cambiar piñon</li>
                     <li>rectificar cigueñal</li>
@@ -129,11 +136,11 @@
                 </ul>
             </div>
 
-            <!-- BIELAS Y PISTONES -->
+            <!------------ BIELAS Y PISTONES ------------->
             <div class="bielasPistones">
-                <h2>bielas y pistones</h2>
-                <img src="./assets/servicios/pistones.png" alt="biela,piston">
                 <ul>
+                    <li><h2>bielas y pistones</h2></li>
+                    <li><img src="./assets/servicios/pistones.png" alt="biela,piston"></li>
                     <li>circulo de biela</li>
                     <li>tolerancia de biela</li>
                     <li>ensamblar pistones</li>
@@ -141,85 +148,95 @@
                 </ul>
             </div>
         </section>
-        <!---------------------- BANNER TIPO DE VEHICULOS -------------------->
+        <!--------------------------- BANNER TIPO DE VEHÍCULOS -------------------------->
         <section class="bannerVehiculos">
-            <div class="bannerTitulo">
-                <h1>
-                    Trabajamos con todo tipo de vehículos y maquinaria
-                </h1>
+
+            <!------------ TEXTO BANNER ------------->
+            <div class="bannerTexto">
+                <ul>
+                    <li>Trabajamos con</li>
+                    <li>todo tipo de</li>
+                    <li>vehículos y</li>
+                    <li>maquinaria</li>
+                </ul>
             </div>
 
-            <!-- VEHÍCULOS LIVIANOS -->
+            <!------------ VEHÍCULOS LIVIANOS ------------->
             <div class="vehiculosLivianos">
-                <img src="./assets/vehiculos/vehiculosLivianos.jpg" alt="vehículo, liviano">
-                <h3>Vehículos Livianos</h3>
                 <ul>
+                    <li><img src="./assets/vehiculos/vehiculosLivianos.jpg" alt="vehículo, liviano"></li>
+                    <li><h3>Vehículos Livianos</h3></li>
                     <li>Gas</li>
                     <li>Diesel</li>
                     <li>Gasolina</li>
                 </ul>
             </div>
 
-            <!-- VEHÍCULOS PESADOS -->
+            <!------------ VEHÍCULOS PESADOS ------------->
             <div class="vehiculosPesados">
-                <img src="./assets/vehiculos/vehiculosPesados.jpg" alt="vehículo, pesado">
-                <h3>Vehículos Pesados</h3>
                 <ul>
+                    <li><img src="./assets/vehiculos/vehiculosPesados.jpg" alt="vehículo, pesado"></li>
+                    <li><h3>Vehículos Pesados</h3></li>
                     <li>Diesel</li>
                     <li>Gasolina</li>
                 </ul>
             </div>
 
-            <!-- MAQUINARIA PESADA -->
+            <!------------ MAQUINARIA PESADA ------------->
             <div class="maquinariaPesada">
-                <img src="./assets/vehiculos/maquinariaPesada.jpg" alt="maquinaria, pesada">
-                <h3>Maquinaria Pesada</h3>
                 <ul>
+                    <li><img src="./assets/vehiculos/maquinariaPesada.jpg" alt="maquinaria, pesada"></li>
+                    <li><h3>Maquinaria Pesada</h3></li>
                     <li>Diesel</li>
                     <li>Gasolina</li>
                 </ul>
             </div>
         </section>
 
-        <!---------------------- ENCUENTRANOS -------------------->
+        <!--------------------------- ENCUENTRANOS -------------------------->
+        
+        <!------------ ENCABEZADO ENCUENTRANOS ------------->
+        <section class="encuentranosEncabezado">
+                <h1>encuentranos</h1>
+        </section>
+
         <section class="encuentranos">
-            
-            <!--------- ICONOS -------->
+            <!------------ ICONOS DE MAPAS ------------->
             <div class="encuentranosIconos">
-                <h1>visitanos</h1>
-                <a href="https://maps.app.goo.gl/6rFFF2Naiqodrdzc9"><i class="bi bi-map"></i></a>
-                <a href="#"><i class="bi bi-car-front"></i></a>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/6rFFF2Naiqodrdzc9"><i class="bi bi-map"></i></a></li>
+                    <li><a href="#"><i class="bi bi-car-front"></i></a></li>
+                </ul>
             </div>
-            <!--------- MAPA -------->
+
+            <!------------ MAPA ------------->
             <div class="encuentranosMapa">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0802100176256!2d-74.21635182427548!3d4.579617295395016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9fd9dcf692b3%3A0xb756e300a737fadb!2sCra.%202A%20%2317-98%2C%20Soacha%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1715553839291!5m2!1ses-419!2sco"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
 
-    <!------------------------------------------------------------------ FOOTER ----     ----------------------------------------------------->
+    <!--------------------------------------------------------------------- FOOTER ------------------------------------------------------------------>
     <footer>
 
-        <!--------- ICONOS ---------->
+        <!------------ ICONOS REDES SOCIALES ------------->
         <div class="redesSociales">
-            <h5>REDES SOCIALES</h5>
+            <h5>redes sociales</h5>
             <a href="https://www.facebook.com/rectificadora.pmw"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/rectificadora.pmw/"><i class="bi bi-instagram"></i></a>
         </div>
-        <!--------- CONTACTOS -------->
+        <!------------ MEDIOS DE CONTACTO ------------->
         <div class="contacto">
-            <h5>CONTACTENOS</h5>
+            <h5>contactanos</h5>
             <ol>
                 <li>+ (57) 333 333 3333 - +(57) 322 222 2222</li>
                 <li>correo.epresa111@mail.com</li>
             </ol>
         </div>
-
     </footer>
-
 </body>
 
 </html>

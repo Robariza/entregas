@@ -1,7 +1,7 @@
 /*----------------------------- IMPORTACIONES ------------------------ */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-/* ---------------------------- pseudoclase -------------------------- */
+/* ---------------------------- DEFINICIÓN DE VARIABLES Y PARÁMETROS -------------------------- */
 :root{
     --tipografia: 'Krub', sans-serif;
     --colorFondo:#F4F4F4;
@@ -11,48 +11,69 @@
     --colorBanner:#F0F0F0;
 }
 
-/*-------------------------------- MARGENES --------------------------*/
+/*------------ MARGEN ELEMENTOS DE TODA LA PÁGINA -------------*/
 *{
     margin: 0;
     padding: 0;
 }
-/* ------------------------------ BODY ---------------------------------- */
+/*----------------------------------------------------------- BODY -----------------------------------------------------*/
 body{
+    /* LIMITACÍON PÁGINA */
     border: 5px solid red;
-    /* ancho de pantalla */
+    /*------------ MAQUINARIA PESADA -------------*/
     width: 100%;
-    /* color de fondo */
+    /*------------ COLOR FONDO -------------*/
     background-color: var(--colorFondo);
-    /* tipografía */
+    /*------------ TIPOGRAFÍA -------------*/
     font-family: var(--tipografia);
-    /* color tipografía */
+    /*------------ COLOR TIPOGRAFÍA -------------*/
     color: var(--colorTexto);
-    /* dimensiones */
+    /*------------ BARRA DESPLAZAMIENTO EN X/Y -------------*/
     overflow-x: hidden;
     overflow-y: border-box;
 }
 
-/*--------------------------------------------------------- HEADER ------------------------------------------------------------*/
+/*----------------------------------------------------------- HEADER -----------------------------------------------------*/
 header{
+    border: 5px solid blue;
     width: 100vw;
     height: 48vh;
 }
- /* ---------------------- MENUNAV ----------------- */
+/*--------------------- MENÚ DE NAVEGACIÓN---------------------*/
 .menuNav{
-    background-color: #CF7500;
+    background-color: var(--colorClaro);
     width: 100%;
     height: 130px;
 }
+/*--------------------- LISTA ACCESOS DE NAVEGACIÓN---------------------*/
+.listaLogos{
+    background-color: var(--colorContraste);
+    height: 60%;
 
-.listaMenu{
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+
     list-style: none;
 }
 
+.listaLogos a:hover{
+    color: white;
+}
+/*--------------------- LISTA MENÚ DE NAVEGACIÓN---------------------*/
+.listaMenu{
+    background-color: var(--colorClaro);
+    height: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+    list-style: none;
+}
+/*------------ TEXTO -------------*/
 .listaMenu a{
     text-decoration: none;
     color:var(--colorTexto);
@@ -63,30 +84,30 @@ header{
 .listaMenu a:hover{
     color: white;
 }
-
+/*------------ LOGO -------------*/
 .logo{
     width: 76px;
     height: 70px;
 }
 
-/* -------------------- BANNER ----------------------- */
+/*--------------------- BANNER ---------------------*/
 
 .banner{
     width: 100%;
     height: 70%;
-    padding-top: 40;
+    padding-top: 30px;
 }
 
 .imgBanner{
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: fill;
 }
 
 /*--------------------------------------------------------- MAIN ------------------------------------------------------------*/
 
 main{
-    border: 5px solid purple;
+    border: 5px solid greenyellow;
 
     width: 100%;
     height: auto;
@@ -94,42 +115,49 @@ main{
     justify-content: center;
     flex-direction: column;
 }
-
-/* -------------------------------------- servicio ----------------------------- */
-.servicios{
-    border: 5px solid yellow;
+/*--------------------- ENCABEZADO SERVICIOS ---------------------*/
+.encabezadoServicios{
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    gap: 50px;
+    margin: 20px;
 }
 
-.tituloServicios{
+.encabezadoServicios h1{
     color: var(--colorClaro);
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
-
-/* ------------------culatas------------------ */
+/*--------------------- SERVICIOS ---------------------*/
+.servicios{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/*------------ CULATAS -------------*/
 .culatas{
     width: 100%;
     color: var(--colorTexto);
     font-size: 18px;
     font-weight: 300;
-    align-items: center;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .culatas h2{
-    color: var(--colorContraste);
+    color: var(--colorClaro);
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
-    align-items: center;
+    text-align: center;
 }
 .culatas img{
     width: 70px;
     height: 70px;
-    text-align: center;
 }
 
 .culatas ul{
@@ -139,26 +167,28 @@ main{
     list-style: none;
 }
 
-/*------------------- bloques ------------------*/
+/*------------ BLOQUES -------------*/
 .bloques{
-    border: 5px solid black;
     width: 100%;
     color: var(--colorTexto);
     font-size: 18px;
     font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .bloques h2{
-    color: var(--colorContraste);
+    color: var(--colorClaro);
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-
 .bloques img{
     width: 70px;
     height: 70px;
-    align-items: center;
 }
 
 .bloques ul{
@@ -168,26 +198,28 @@ main{
     list-style: none;
 }
 
-/*-------------------- cigueñales --------------*/
-
+/*------------ CIGUEÑALES -------------*/
 .cigueñal{
     width: 100%;
     color: var(--colorTexto);
     font-size: 18px;
     font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .cigueñal h2{
-    color: var(--colorContraste);
+    color: var(--colorClaro);
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-
 .cigueñal img{
     width: 70px;
     height: 70px;
-    align-items: center;
 }
 
 .cigueñal ul{
@@ -197,26 +229,28 @@ main{
     list-style: none;
 }
 
-/*----------------------- BIELA Y PISTONES -------------------*/
-
+/*------------ BIELAS Y PISTONES -------------*/
 .bielasPistones{
     width: 100%;
     color: var(--colorTexto);
     font-size: 18px;
     font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .bielasPistones h2{
-    color: var(--colorContraste);
+    color: var(--colorClaro);
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-
 .bielasPistones img{
     width: 70px;
     height: 70px;
-    align-items: center;
 }
 
 .bielasPistones ul{
@@ -226,7 +260,7 @@ main{
     list-style: none;
 }
 
-/* --------------------------- BANNER TIPO DE VEHICULO ----------------------- */
+/*--------------------- BANNER TIPO DE VEHÍCULOS ---------------------*/
 
 .bannerVehiculos {
     background-color: var(--colorBanner);
@@ -234,33 +268,21 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding: 50px;
+    margin: 30px;
     gap: 40px;
 }
 
-.bannerTitulo h1{
-    text-decoration: none;
+.bannerTexto ul{
     color:var(--colorTexto);
     font-size: 40px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    list-style: none;
 }
 
-/* ----------------- VEHICULOS LIVIANOS------------------- */  
+/*------------ VEHÍCULOS LIVIANOS -------------*/  
 .vehiculosLivianos {
-    align-items: center;
-}
-
-.vehiculosLivianos img{
-    width: 170px;
-    height: 145px;
-    align-items: center;
-}
-
-.vehiculosLivianos h3{
-    font-size: 16px;
-    font-weight: bold;
-    align-items: center;
+    color: var(--colorContraste);
 }
 
 .vehiculosLivianos ul{
@@ -270,22 +292,21 @@ main{
     list-style: none;
 }
 
-/* ----------------- VEHICULOS PESADOS------------------- */  
-
-.vehiculosPesados {
-    align-items: center;
-}
-
-.vehiculosPesados img{
-    width: 170px;
-    height: 145px;
-    align-items: center;
-}
-
-.vehiculosPesados h3{
+.vehiculosLivianos h3{
     font-size: 16px;
     font-weight: bold;
-    align-items: center;
+    line-height: 2.5;
+}
+
+.vehiculosLivianos img{
+    width: 170px;
+    height: 145px;
+}
+
+/*------------ VEHÍCULOS PESADOS -------------*/  
+
+.vehiculosPesados {
+    color: var(--colorContraste);
 }
 
 .vehiculosPesados ul{
@@ -294,22 +315,21 @@ main{
     text-align: center;
     list-style: none;
 }
-/* ----------------- MAQUINARIA PESADA ------------------- */  
 
-.maquinariaPesada {
-    align-items: center;
-}
-
-.maquinariaPesada img{
-    width: 170px;
-    height: 145px;
-    align-items: center;
-}
-
-.maquinariaPesada h3{
+.vehiculosPesados h3{
     font-size: 16px;
     font-weight: bold;
-    align-items: center;
+    line-height: 2.5;
+}
+
+.vehiculosPesados img{
+    width: 170px;
+    height: 145px;
+}
+/*------------ MAQUINARIA PESADA -------------*/  
+
+.maquinariaPesada {
+    color: var(--colorContraste);
 }
 
 .maquinariaPesada ul{
@@ -319,27 +339,52 @@ main{
     list-style: none;
 }
 
-/* ----------------------------------- VISITANOS ------------------------------- */
+.maquinariaPesada h3{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.5;
+}
 
-.encuentranos{
-    border: 5px solid green;
+.maquinariaPesada img{
+    width: 170px;
+    height: 145px;
+}
+
+/* --------------------------- ENCUENTRANOS ----------------------- */
+
+.encuentranosEncabezado{
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    padding: 50px;
-    gap: 220px;
+    margin: 20px;
 }
 
-.encuentranosIconos h1{
+.encuentranosEncabezado h1{
+    color: var(--colorClaro);
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: var(--colorClaro);
 }
 
-.encuentranosIconos i{
-    color: var(--colorFondo);
+.encuentranos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.encuentranosIconos {
+    width: 25%;
+    color: var(--colorTexto);
+    font-size: 35px;
+}
+
+.encuentranosIconos li{
+    list-style: none;
+    display: inline;
+    margin: 20px;
 }
 
 .encuentranosMapa{
@@ -349,36 +394,43 @@ main{
 /*--------------------------------------------------------- FOOTER ------------------------------------------------------------*/
 
 footer{
+    border: 5px solid purple;
     width: 100%;
     height: auto;
-
-    background-color: var(--colorTexto);
-    gap: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--colorTexto);
     color: white;
 }
 
+/* --------------------------- REDES SOCIALES ----------------------- */
 .redesSociales{
     text-align: center;
+    margin: 20px;
 }
 
 .redesSociales h5{
-    text-align: center;
+    text-transform: uppercase;
+    line-height: 5;
 }
 
+.redesSociales a{
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* --------------------------- INFO CONTACTO ----------------------- */
 .contacto{
     text-align: center;
 }
 
 .contacto h5{ 
-    text-align: center;
-    margin-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 5;
 }
 
 .contacto ol{
-    text-align: center;
     list-style: none;
 }
 
