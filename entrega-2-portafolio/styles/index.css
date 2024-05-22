@@ -1,0 +1,303 @@
+/* --------------------- IMPORTACIONES ---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    /*--------------------- PALETA DE COLORES ---------------------*/
+    --colorTexto: #F0F3FF;
+    --colorContraste: #211951;
+    --colorEnfasis: #836FFF;
+
+    /*--------------------- TIPOGRAFÍA ---------------------*/
+    --textoTitulo: "Inter", sans-serif;
+    --textoContenido: "Roboto Mono", monospace;
+}
+
+/*--------------------- REDEFINICIÓN PARAMETROS PÁGINA ---------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------------------------ BODY ------------------------------------------*/
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+
+    background: linear-gradient(45deg, #C4A93B, #9B3E52, #721B8D, #421B4D, #0D183A);
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+    font-family: var(--textoContenido); /* Fuente por defecto */
+    color: var(--colorTexto); /* Color de texto por defecto */
+}
+
+@keyframes color {
+    from {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0 50%;
+    }
+}
+
+/*------------------------------------------ HEADER ------------------------------------------*/
+header {
+    border: solid 5px white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--------------------- NAV ---------------------*/
+.menuNav {
+    width: 100%;
+    height: 6%;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+/*--------------------- LISTA DE MENÚ ---------------------*/
+.menuLista {
+    height: 100%;
+
+    border-radius: 8px;
+    background-color: var(--colorContraste);
+    opacity: 0.6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 1%;
+    gap: 40px;
+
+    font-family: var(--textoContenido);
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.menuLista a {
+    text-decoration: none;
+    color: var(--colorTexto);
+}
+
+/* --------------------- CURRICULUM ---------------------*/
+.cv {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin-right: 8%;
+    font-size: 40px;
+}
+
+.cv a {
+    text-decoration: none;
+    color: var(--colorTexto);
+}
+
+/*--------------------- BANNER ---------------------*/
+.banner {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+
+    font-family: var(--textoTitulo);
+    color: var(--colorTexto);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/*------------------------------------------ MAIN ------------------------------------------*/
+main {
+    border: solid 5px yellowgreen;
+    width: 100%;
+
+    display: grid;
+    place-content: center;
+}
+
+/*--------------------- HABILIDADES ---------------------*/
+.tituloHabilidades {
+    text-transform: uppercase;
+    margin-top: 8%;
+    padding: 2%;
+}
+
+.contenedorHabilidades {
+    width: 100vh;
+    height: 100%;
+}
+
+.habilidadesSection {
+    width: 70vw;
+    display: flex;
+
+    border: solid 3px var(--colorTexto);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.habilidad {
+    border-left: solid 3px var(--colorTexto);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2%;
+}
+
+.habilidad img {
+    width: 20%;
+    height: 40%;
+}
+
+.habilidad h4 {
+    text-transform: uppercase;
+    margin: 4%;
+}
+
+.habilidad p {
+    text-align: center;
+}
+
+/* --------------------- PROYECTOS ---------------------*/
+
+.tituloProyecto {
+    text-transform: uppercase;
+    margin-top: 8%;
+    padding: 2%;
+}
+
+.contenedor {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    width: 100vw;
+    max-width: 700px;
+    height: 400px;
+
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide ul {
+    display: flex;
+    padding: 0%;
+    width: 400%;
+
+    animation: slide 15s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
+}
+
+@keyframes slide {
+    from {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+    to {
+        margin-left: -300%;
+    }
+}
+
+/*--------------------- EXPERIENCIA ---------------------*/
+.tituloExp {
+    text-transform: uppercase;
+    margin-top: 8%;
+    padding: 2%;
+}
+
+.experienciaSection {
+    width: 100%;
+    padding: 2%;
+}
+
+.contenedorExp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------------------------------------ FOOTER ------------------------------------------*/
+.contactoSection {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--colorContraste);
+    color: var(--colorTexto);
+    text-align: center;
+}
+
+.tituloContacto {
+    text-transform: uppercase;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.Contactame {
+    margin: 20px 0;
+}
+
+.contenedorCorreo {
+    font-size: 20px;
+}
+
+.redesContacto {
+    margin-top: 20px;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes li {
+    margin: 0;
+}
+
+.redes a {
+    text-decoration: none;
+    color: var(--colorTexto);
+    font-size: 24px;
+}
