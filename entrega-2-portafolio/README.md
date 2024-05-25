@@ -1,8 +1,8 @@
-## NOMBRE PROYECTO: ENTREGA 2 PORTAFOLIO    
+## NOMBRE PROYECTO: ENTREGA FINAL PORTAFOLIO    
 
 ## DESCRIPCIÓN DEL PROYECTO
 
-Segundo avance protafolio bootcamp 2024
+Entrega final portafolio personal haciendo uso de las practicas vistas de html y css en el Bootcamp.
 
-## AUTOR - robinson ariza
+## AUTOR - Robinson Ariza 
 
