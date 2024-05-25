@@ -26,19 +26,21 @@ body {
     overflow-x: hidden;
 
     background: linear-gradient(45deg, #C4A93B, #9B3E52, #721B8D, #421B4D, #0D183A);
-    background-size: 500% 500%;
+    background-size: 950% 950%;
     animation: color 12s ease-in-out infinite;
-    font-family: var(--textoContenido); /* Fuente por defecto */
-    color: var(--colorTexto); /* Color de texto por defecto */
+    font-family: var(--textoContenido);
+    color: var(--colorTexto);
 }
 
 @keyframes color {
     from {
         background-position: 0 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     to {
         background-position: 0 50%;
     }
@@ -46,7 +48,6 @@ body {
 
 /*------------------------------------------ HEADER ------------------------------------------*/
 header {
-    border: solid 5px white;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -56,26 +57,28 @@ header {
 
 /*--------------------- NAV ---------------------*/
 .menuNav {
+
     width: 100%;
-    height: 6%;
+    height: 8%;
 
     display: flex;
     justify-content: center;
-    margin-top: 1%;
 }
 
 /*--------------------- LISTA DE MENÚ ---------------------*/
 .menuLista {
-    height: 100%;
+    width: auto;
 
     border-radius: 8px;
     background-color: var(--colorContraste);
-    opacity: 0.6;
+    opacity: 0.7;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+    position: fixed;
+
     padding: 1%;
     gap: 40px;
 
@@ -92,16 +95,19 @@ header {
 /* --------------------- CURRICULUM ---------------------*/
 .cv {
     width: 100%;
-
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    right: 3%;
+    /* Revertido a valor original */
+    top: 5%;
 
-    margin-right: 8%;
     font-size: 40px;
 }
 
 .cv a {
     text-decoration: none;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
     color: var(--colorTexto);
 }
 
@@ -124,35 +130,40 @@ header {
 
 /*------------------------------------------ MAIN ------------------------------------------*/
 main {
-    border: solid 5px yellowgreen;
-    width: 100%;
+    width: 100vw;
 
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*--------------------- HABILIDADES ---------------------*/
 .tituloHabilidades {
     text-transform: uppercase;
-    margin-top: 8%;
+    margin-top: 6%;
     padding: 2%;
 }
 
 .contenedorHabilidades {
-    width: 100vh;
+
+    width: 100vw;
     height: 100%;
+
+    display: grid;
+    place-content: center;
 }
 
 .habilidadesSection {
-    width: 70vw;
+    width: 60vw;
+
     display: flex;
 
-    border: solid 3px var(--colorTexto);
+    border: solid 2px var(--colorTexto);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 .habilidad {
-    border-left: solid 3px var(--colorTexto);
+    border-left: solid 2px var(--colorTexto);
 
     display: flex;
     flex-direction: column;
@@ -162,8 +173,9 @@ main {
 }
 
 .habilidad img {
-    width: 20%;
-    height: 40%;
+    width: 80px;
+    height: 80px;
+    margin: 1%;
 }
 
 .habilidad h4 {
@@ -179,19 +191,24 @@ main {
 
 .tituloProyecto {
     text-transform: uppercase;
-    margin-top: 8%;
-    padding: 2%;
+    margin-top: 6%;
 }
 
-.contenedor {
+.proyectos {
     height: 100%;
     width: 100%;
+
+    margin-top: 4%;
+
     display: flex;
     justify-content: center;
+
 }
 
+/* --------------------- SLIDER --------------------- */
+
 .slide {
-    width: 100vw;
+    width: 60%;
     max-width: 700px;
     height: 400px;
 
@@ -212,6 +229,7 @@ main {
     from {
         margin-left: 0;
     }
+
     20% {
         margin-left: 0;
     }
@@ -219,6 +237,7 @@ main {
     25% {
         margin-left: -100%;
     }
+
     45% {
         margin-left: -100%;
     }
@@ -226,6 +245,7 @@ main {
     50% {
         margin-left: -200%;
     }
+
     70% {
         margin-left: -200%;
     }
@@ -233,30 +253,85 @@ main {
     75% {
         margin-left: -300%;
     }
+
     to {
         margin-left: -300%;
     }
 }
 
+.descripcion {
+    width: 25%;
+    height: 100%;
+
+    margin-left: 4%;
+}
+
+.descripcion h4 {
+    margin: 8%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.descripcion p {
+    text-align: center;
+}
+
+.imgDescripcion {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20%;
+}
+
+.imgDescripcion img {
+    width: 50px;
+    height: 50px;
+}
+
 /*--------------------- EXPERIENCIA ---------------------*/
+
 .tituloExp {
     text-transform: uppercase;
-    margin-top: 8%;
-    padding: 2%;
+    margin-top: 6%;
+
 }
 
-.experienciaSection {
-    width: 100%;
+.acordeonExp {
+    width: 50vw;
     padding: 2%;
-}
 
-.contenedorExp {
-    width: 100%;
-    height: 100%;
+    margin: auto;
+    margin-bottom: 2%;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    gap: 5px;
 }
+
+.acordeon {
+    background: var(--colorContraste);
+    border-radius: 10px;
+
+    color: var(--colorTexto);
+    padding: 3%;
+    cursor: pointer;
+}
+
+.acordeon ::marker {
+    content: "";
+}
+
+.acordeon:hover {
+    background-color: var(--colorEnfasis);
+}
+
+.acordeon p {
+    padding: 2%;
+    background: none;
+    color: var(--colorTexto);
+}
+
 
 /*------------------------------------------ FOOTER ------------------------------------------*/
 .contactoSection {
@@ -300,4 +375,73 @@ main {
     text-decoration: none;
     color: var(--colorTexto);
     font-size: 24px;
+}
+
+
+/* Media Query */
+@media (max-width: 390px) {
+
+    header,
+    main,
+    .contenedorHabilidades,
+    .proyectos,
+    .acordeonExp {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuLista {
+        gap: 20px;
+        padding: 2%;
+    }
+
+    .cv {
+        font-size: 24px;
+    }
+
+    .banner {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .habilidadesSection {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .habilidad {
+        border-top: solid 3px white;
+    }
+
+    .tituloProyecto {
+
+        margin-top: 20%;
+
+    }
+
+    .slide {
+        width: 90%;
+        height: 200px;
+    }
+
+    .descripcion {
+        width: 90%;
+    }
+
+    .imgDescripcion {
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .acordeonExp {
+        width: 90%;
+    }
+
+    .contactoSection {
+        padding: 10px;
+    }
 }
